@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Games</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 40px 20px;
+    color: white;
+    animation: fadeIn 0.8s ease-in;
+    overflow-x: hidden;
+  }
+
+  /* FLOATING BACKGROUND */
+  .floating {
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    top: 20%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+    z-index: -1;
+  }
+
+  /* BACK BUTTON */
+  .back-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    font-size: 14px;
+  }
+
+  .back-btn:hover {
+    transform: scale(1.08);
+    background: rgba(255,255,255,0.35);
+  }
+
+  .wrapper {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 34px;
+    animation: pop 1s ease;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    animation: slideUp 1s ease;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardIn 0.8s ease forwards;
+  }
+
+  .card:nth-child(1) { animation-delay: 0.2s; }
+  .card:nth-child(2) { animation-delay: 0.4s; }
+  .card:nth-child(3) { animation-delay: 0.6s; }
+  .card:nth-child(4) { animation-delay: 0.8s; }
+
+  .card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.2);
+  }
+
+  .card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .card h3 {
+    margin-bottom: 5px;
+  }
+
+  .card p {
+    font-size: 13px;
+    opacity: 0.9;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes cardIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(40px); }
+    100% { transform: translateY(0px); }
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING EFFECT -->
+<div class="floating"></div>
+
+<!-- BACK BUTTON -->
+<a class="back-btn" href="index.html">← Back to Home</a>
+
+<div class="wrapper">
+
+  <h1>🎮 My Favorite Games</h1>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="ml.jfif" alt="photo">
+      <h3>Game Name:Mobile Legends</h3>
+      <p>This is one of my favorite games because it's fun and exciting especially when im with my friends.</p>
+    </div>
+
+    <div class="card">
+      <img src="codm.jfif" alt="photo">
+      <h3>Game Name:Call of Duty</h3>
+      <p>I like this game for its gameplay, trashtalkan with friends and I like the graphics. </p>
+    </div>
+
+    <div class="card">
+      <img src="roblox.jfif" alt="photo">
+      <h3>Game Name:Roblox</h3>
+      <p>Very addictive and enjoyable game to play.</p>
+    </div>
+
+    <div class="card">
+      <img src="dragon.webp" alt="photo">
+      <h3>Game Name:dragon mania</h3>
+      <p>One of the best games I play in my free time in my childhood if im bored.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 My Games Page
+  </footer>
+
+</div>
+
+</body>
+</html>
