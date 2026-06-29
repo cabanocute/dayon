@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My childhood memories</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+    padding: 40px 20px;
+    color: white;
+    overflow-x: hidden;
+
+    animation: fadeIn 0.8s ease-in;
+  }
+
+  /* FLOATING BACKGROUND */
+  .floating {
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    top: 20%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+    z-index: -1;
+  }
+
+  /* BACK BUTTON */
+  .back-btn {
+    position: fixed;
+    top: 15px;
+    left: 150px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    font-size: 14px;
+  }
+
+  .back-btn:hover {
+    transform: scale(1.08);
+    background: rgba(255,255,255,0.35);
+  }
+  .bk{
+    position: fixed;
+    top: 55px;
+    left: 150px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    font-size: 14px;
+  }
+
+  .bh{
+    position:fixed;
+    top: 97px;
+    left: 150px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    font-size: 14px;
+  }
+
+.bt{
+    position:fixed;
+    top: 137px;
+    left: 150px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    font-size: 14px;
+  }
+
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    animation: slideUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 34px;
+    animation: pop 1s ease;
+  }
+
+  .sub {
+    text-align: center;
+    opacity: 0.9;
+    margin-bottom: 30px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    transition: 0.3s;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardIn 0.8s ease forwards;
+  }
+
+  .card:nth-child(1) { animation-delay: 0.2s; }
+  .card:nth-child(2) { animation-delay: 0.4s; }
+  .card:nth-child(3) { animation-delay: 0.6s; }
+  .card:nth-child(4) { animation-delay: 0.8s; }
+
+  .card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.2);
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card p {
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0.9;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes cardIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(40px); }
+    100% { transform: translateY(0px); }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING EFFECT -->
+<div class="floating"></div>
+
+<!-- BACK BUTTON -->
+<a class="back-btn" href="index.html">← Back to Home</a>
+  <a class="bk" href="vio.html">👤 About Me</a>
+  <a class="bh" href="date.html">🎮 My Games</a>
+  <a class="bt" href="gf.html">📸 Memories</a>
+
+
+<div class="container">
+
+  <h1>💜 My Childhood Memories</h1>
+  <p class="sub">A memories I fulfilled during childhood and I successfuly became a altar boy in church</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="mama.jfif" alt="photo">
+      <p>This moment is renewal of being altar server in 2017.</p>
+    </div>
+
+    <div class="card">
+      <img src="candle.jfif" alt="photo">
+      <p>Im turning 5years old at this photo.</p>
+    </div>
+
+    <div class="card">
+      <img src="cross.jfif" alt="photo">
+      <p>The acceptance of being altar boy at church(2016)</p>
+    </div>
+
+    <div class="card">
+      <img src="cycling.jfif" alt="photo">
+      <p>I cycling with my cousin.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Memory of childhood
+  </footer>
+
+</div>
+
+</body>
+</html>
